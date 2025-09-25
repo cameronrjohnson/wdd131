@@ -6,6 +6,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark h3 {
+    color: lightblue;
+}
+
 h3 {
     font-size: medium;
     color: #006EB6;
@@ -15,32 +25,36 @@ h3 {
     border-bottom: 1px solid gray;
 }
 
-
 h1 {
     font-weight: lighter;
     font-size: xx-large;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
+
 p {
     line-height: 1.5;
     text-align: left;
     font-size: 20px;
     margin: 0;
 }
+
 ol {
     line-height: 1.5;
     font-size: 20px;
     text-align: left;
 }
+
 img {
     max-width: 150px;
 }
+
 .italicized {
     margin-top: 20px;
     margin-bottom: 20px;
     font-style: italic;
 }
+
 .top-margin {
     margin-top: 30px;
 }

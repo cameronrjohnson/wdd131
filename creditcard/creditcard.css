@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    background-color: #dcdcdc;
+    padding: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    position: relative;
+    z-index: 2;
+}
+
+.card-back {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    z-index: 1;
+    background-color: #c9c9c9;
+}
+
+.total {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.exp-fields {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+}
+
+.black-strip {
+    background-color: #333;
+    height: 35px;
+    border-radius: 2px;
+    margin: 0;
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+    top: -10px;
+}
+
+.cvc-section {
+    margin-top: 80px;
+    margin-left: 260px;
+    width: 60px;
+}
+
+.holder {
+    flex: 2;
+}
+
+.expiration {
+    flex: 1;
+}
+
+#cardholder {
+    width: 100%;
+}
+
+#submitBtn {
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-left: 400px;
+    margin-top: 60px;
+    }
+
+#submitBtn:hover {
+    background-color: #e0e0e0;
+}

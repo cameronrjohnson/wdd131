@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Recipes</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="This is the Recipes Page" />
+        <meta name="author" content="Cameron Johnson" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="recipes.css" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <script src="main.js" defer></script>
+        <script src="recipes.mjs" defer></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <img src="images/recipe-book.png" alt="Recipes Logo" width="200" height="200">
+        </header>
+        <main>
+            <form class="search-form">
+                <input type="text" id="search" placeholder="Find a recipe" />
+                <button class="search-btn" aria-label="Search">🔍</button>
+            </form>
+            <section id="recipeContainer"></section>
+        </main>
+        <footer>
+            <div class="footer-text">
+                Recipe icons created by Freepik - Flaticon  
+            </div>
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+        </footer>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>

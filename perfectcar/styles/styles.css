@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed:400,700");
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffcc00;
+  --accent1-color: #1a1a1a;
+  --accent2-color: #2a2a2a;
+  --heading-font: "Arial Narrow", "Roboto Condensed", Arial, Helvetica, sans-serif;
+  --paragraph-font: "Lato", Helvetica, Arial, sans-serif;
+  --text-color: #e6e6e6;
+  --text-muted: #bfbfbf;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  background: #121212;
+  color: var(--text-color);
+  line-height: 1.7;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main {
+  flex: 1;
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-top: 2.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.25em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--secondary-color);
+}
+
+p {
+  margin: 0 auto 1rem;
+  opacity: 0.9;
+  max-width: 80ch;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+ul {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.section-card {
+  background: var(--accent1-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.section-card h2 {
+  margin-top: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+#nav-logo {
+  width: 120px;
+  height: auto;
+}
+
+.triangle-wrapper {
+  position: relative;
+  width: 50%;
+  max-width: 900px;
+  margin: 4em auto;
+}
+
+.triangle-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cell {
+  flex: 1 1 18%;
+  max-width: 130px;
+  aspect-ratio: 13 / 8;
+  background: var(--accent2-color);
+  border-radius: 8px;
+  transition: 0.25s;
+  min-width: 60px;
+}
+
+.cell:hover {
+  background: var(--secondary-color);
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.cell.selected {
+  background: var(--secondary-color);
+  transform: scale(1.08);
+  border: 2px solid black;
+}
+
+.triangle-label {
+  position: absolute;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+.label-left {
+  bottom: -50px;
+  left: 0;
+  transform: translate(-50%, 0);
+}
+
+.label-right {
+  bottom: -50px;
+  right: 0;
+  transform: translate(50%, 0);
+}
+
+.label-top {
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  display: block;
+  margin: 3em auto;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.9em 2.4em;
+  font-size: 1.2em;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+footer {
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: var(--accent1-color);
+    padding: 2rem;
+    width: 95%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--secondary-color);
+}
+
+.modal-content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: 0.2s;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+.car-info img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.car-info h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.car-info p {
+    color: var(--text-muted);
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.car-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background: var(--accent2-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.learn-more-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: var(--secondary-color);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  footer a {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  .triangle-wrapper {
+    width: 100%;
+    scale: 0.85;
+  }
+
+  .cell {
+    flex: 1 1 22%;
+    min-width: 50px;
+  }
+}
